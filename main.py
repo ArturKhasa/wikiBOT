@@ -2,23 +2,14 @@ import wikiModel, telebot
 import random
 
 
-# Создаем экземпляр бота
-bot = telebot.TeleBot('5366147447:AAHszjrtM0bHWKALS_2mVTWQIZOb6SpxIpA')
-# keys = telebot.types.ReplyKeyboardMarkup(True, True)
 
-# keys.row('Русский', 'Английский')
+bot = telebot.TeleBot('5366147447:AAHszjrtM0bHWKALS_2mVTWQIZOb6SpxIpA')
 
 # Функция, обрабатывающая команду /start
 @bot.message_handler(commands=["start"])
 def start(message, res=False):
     bot.send_message(message.chat.id, 'Отправьте мне любое слово, и я найду его значение на Wikipedia')
 
-
-# @bot.message_handler(commands=["lang"])
-# def chooseLang(message):
-#     bot.send_message(message.chat.id, 'Выбери язык запроса:', reply_markup=keys)
-#     wikiModel.set_lang(message.text)
-#     message.text = None
 
 # Получение сообщений от юзера
 @bot.message_handler(content_types=["text"])

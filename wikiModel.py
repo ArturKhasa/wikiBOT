@@ -1,15 +1,11 @@
 import wikipedia, re, string
 
-# Устанавливаем русский язык в Wikipedia
-
 alphabet = string.ascii_lowercase + 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя' + string.digits
+
+# Устанавливаем русский язык в Wikipedia
 wikipedia.set_lang("ru")
 
-# def set_lang(message):
-#     if message == 'Русский':
-#         wikipedia.set_lang("ru")
-#     elif message == 'Английский':
-#         wikipedia.set_lang("en")
+
 
 def clean_str(mesage):
     res = mesage.lower()
